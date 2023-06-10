@@ -10,6 +10,7 @@
     position: relative;
     border-radius: 10px;
     background-color: rgb(46, 186, 196);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .status{
     height: 170px; 
