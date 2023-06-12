@@ -16,7 +16,6 @@
             <div class="box-animation box-2"></div>
             
             <div class="row status">
-                <i class="fa-sharp fa-solid fa-sun" id="icon"></i>
             </div>
 
             <div class="row pos-relative">
@@ -35,7 +34,7 @@
 
     <script>
         let curDate = document.getElementById('date');
-        let weatherIcon = document.getElementsByClassName('status');
+        let weatherIcon = document.querySelector('.status');
 
         const getCurrentTime =()=> {
             
@@ -69,6 +68,17 @@
         }
 
         curDate.innerHTML = getCurrentTime();
+
+        const tempStatus = '{%tempstatus%}';
+        
+        if(tempStatus == 'Clouds') {
+            weatherIcon.innerHTML = "<i class='fa-solid fa-cloud-sun' style='color:#ffffff' id='icon'></i>"
+        }else if(tempStatus == 'Rain'){
+            weatherIcon.innerHTML = '<i class="fa-solid fa-cloud-showers-heavy" style="color: #303030" id="icon"></i>'
+        }else if(tempStatus == 'Sunny'){
+            weatherIcon.innerHTML = '<i class="fa-sharp fa-solid fa-sun" style="color:#ffdc14" id="icon"></i>'
+        }
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>

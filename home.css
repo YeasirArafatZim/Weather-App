@@ -24,7 +24,6 @@
     margin-top: 3rem;
     align-items: center;
     font-size: 40px;
-    color: rgb(255, 220, 20);
     animation: zoom 3s infinite alternate;
 }
 @keyframes zoom {
@@ -55,7 +54,7 @@
 }
 
 .box-animation {
-    animation: circle 4s linear infinite;
+    animation: circle 3s linear infinite;
     border-radius: 100%;
     height: 700px;
     width: 700px;
